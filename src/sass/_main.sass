@@ -1,0 +1,393 @@
+.header
+	width: 100% 
+	position: relative
+	&__top
+		@extend %in 
+	&__logo
+		float: left
+		margin-left: 10px
+		display: inline-block
+		+s(jetro)
+		margin-top: 20px
+		+r(700)
+			margin-top: 70px
+		+r(320)
+			margin-top: 85px
+	&__nav
+		float: right
+		text-align: center
+		+r(720)
+			position: static
+			display: block
+			padding-top: 20px
+		+r(320)
+			position: static
+			display: block
+			padding-top: 30px
+			padding-bottom: 20px
+		a
+			font-family: 'BebasNeue', serif
+			text-transform: uppercase
+			color: #B9B9B9  
+			text-decoration: none
+			letter-spacing: 0.7px 
+			font-size: 19px
+			height: 78px 
+			line-height: 78px
+			padding: 0 12.6px
+			-webkit-transition: background-color 1s ease 
+			-moz-transition: background-color 1s ease 
+			-ms-transition: background-color 1s ease 
+			-o-transition: background-color 1s ease 
+			transition: background-color 1s ease  
+			+r(720)
+				font-size: 25px
+				height: 20px
+				line-height: 20px
+			+r(320)
+				font-size: 30px
+				height: 30px
+				line-height: 30px
+			&:hover
+				color: #E8603C 
+		li
+			display: inline
+			+r(720)
+				margin-bottom: 10px 
+				text-align: center 
+				display: block
+			+r(320)
+				margin-bottom: 15px 
+	&__blog
+		width: 100%
+		margin-bottom: 24px
+	&__tittle
+		@extend %in
+		margin-top: -60px
+		border-left: 10px solid #FFF
+		border-right: 10px solid #FFF
+		h1
+			font-family: 'BebasNeue', serif
+			text-transform: uppercase
+			line-height: 60px
+			background-color: #E8603C
+			color: #FFF  
+			padding-left: 18px
+			letter-spacing: 1px 
+			font-size: 28px
+			font-weight: normal
+		+r(1000)
+			margin-top: -60px 
+		+r(320)
+			text-align: center 
+	&__line
+		max-width: 100%
+		background-color: #F3AF9D
+		height: 60px
+.section
+	@extend %in
+	padding-left: 10px
+	position: relative 
+	+r(720)
+		max-width: 80%
+		border: 1px solid #FFF 
+	+r(600)
+		max-width: 70%
+	+r(320)
+		max-width: 70% 
+		margin-bottom: 20px
+	&__img-wp
+		img
+			max-width: 100%
+			display: inline-block
+	&__img-jesus
+		img
+			max-width: 100%
+			display: inline-block
+			margin-top: -75px
+			+r(320)
+				margin-top: -75px
+		+r(1200)
+			margin-top: 75px
+		+r(820)
+			margin-top: 75px
+			img
+				max-width: 80%
+		+r(720)
+			margin-top: 75px
+			img  
+				max-width: 80%
+		+r(650)
+			img  
+				max-width: 100%
+	&__sidebar
+		width: 220px
+		position: absolute
+		top: 0
+		right: 8px 
+		+r(1200)
+			top: 0
+			right: -50px
+		+r(1000)
+			width: 100% 
+			position: relative
+		+r(450)
+			top: -70px
+			right: 0
+		+r(320)
+			top: 0
+			right: 0 
+	&__block
+		+r(1000)
+			width: 260px
+			float: left 
+			padding-bottom: 100px
+			padding-left: 30px 
+		+r(850)
+			width: 260px
+			padding-bottom: 40px
+			padding-left: 0
+			float: none
+		+r(320)
+			width: 200px
+			padding-bottom: 0
+	&__photo
+		width: 50px
+		height: 50px
+		border: 1px solid #e8603c
+		background-color: #F3AF9D 
+		display: inline-block
+	&__line1
+		float: right
+		i
+			display: inline-block
+			+s(line1)
+	&__line2
+		float: right
+		i
+			display: inline-block
+			+s(line2)
+	&__line3
+		float: right
+		i
+			display: inline-block
+			+s(line3)
+	&__item
+		float: left
+		margin-bottom: 3px
+	&__descr
+		float: none
+	&__tittle
+		width: 220px
+		display: inline-block
+	.container
+		max-width: 680px
+		+r(650)
+			display: inline-block
+		+r(320)
+			display: inline-block
+			max-width: 100%
+		&__left 
+			width: 90px
+			float: left
+			+r(650)
+				float: none
+				padding-left: 50px
+				width: 200px
+			+r(450)
+				padding-left: 0
+			+r(320)
+				padding-left: 0
+		&__right
+			width: 505px
+			float: right
+			margin-right: 27px
+			+r(650)
+				float: none
+				width: 350px
+				margin-left: 50px
+			+r(450)
+				margin-left: 0
+			+r(320)
+				width: 480px 
+				margin-left: 0		
+.feedback
+	@extend %in
+	position: relative
+	padding-left: 10px
+	margin-top: -10px
+	+r(1200)
+		margin-top: 50px
+	+r(600)
+		max-width: 70%
+	+r(450)
+		max-width: 60% 
+	+r(320)
+		max-width: 65%
+		margin-top: 50px
+	&__textarea
+		background-color: #F1F1F1 
+		font-style: italic
+		font-size: 13px
+		font-family: 'HelveticaNeue', serif
+		color: #474747 
+		width: 655px
+		padding: 21px 27px 20px 75px
+		margin-bottom: 37px
+		margin-top: -75px
+		+r(700)
+			max-width: 100%
+			font-size: 14px
+		+r(500)
+			padding-left: 30px
+		+r(320)
+			padding-top: 50px
+	&__logo
+		position: absolute
+		top: 19px
+		left: 45px
+		i
+			display: inline-block
+			+s(icon5)
+.freebies
+	@extend %in
+	position: relative
+	padding-left: 10px
+	margin-top: -12px
+	+r(1200)
+		margin-top: 20px
+	+r(600)
+		max-width: 70% 
+	+r(450)
+		max-width: 65%
+	&__text
+		width: 650px
+		margin-top: -75px
+		+r(700)
+			max-width: 90%
+		+r(450)
+			max-width: 120% 
+			margin-top: 0
+		+r(320)
+			max-width: 180%
+		h2
+			line-height: 0
+			letter-spacing: 1px 
+			font-size: 20px
+		a
+			color: #ACACAC 
+			font-size: 12px
+			line-height: 40px 
+			text-decoration: none
+			font-family: 'HelveticaNeue', serif
+		p
+			margin-top: 8px
+			font-size: 12px  
+			font-family: 'HelveticaNeue', serif
+			+r(600)
+				font-size: 14px 
+	&__line
+		@extend .line
+		margin-bottom: 37px
+.numbers
+	@extend %in
+	padding-left: 12px
+	a
+		width: 27px
+		height: 27px
+		color: #FFF 
+		background-color: #F3B29D
+		line-height: 27px
+		text-align: center
+		display: inline-block
+		text-decoration: none
+		margin-bottom: 41px
+		-webkit-transition: background-color 1s ease 
+		-moz-transition: background-color 1s ease 
+		-ms-transition: background-color 1s ease 
+		-o-transition: background-color 1s ease 
+		transition: background-color 1s ease 
+		font-family: 'BebasNeue', serif
+		&:hover
+			background-color: #E8663C
+.footer
+	max-width: 100%
+	position: relative
+	color: #FFF
+	padding-bottom: 620px
+	&__bcg
+		max-width: 100%
+		height: 310px 
+		background-color: #F3AF9D 
+		+r(500)
+			height: 450px
+	&__block
+		@extend %in
+		height: 310px
+		margin-top: -310px
+		border-left: 10px solid #FFF
+		border-right: 10px solid #FFF
+		background-color: #E8663C
+		padding-left: 34px 
+		+r(1000)
+			margin-top: -310px
+		+r(720)
+			max-width: 100%
+		+r(500)
+			height: 450px
+			margin-top: -450px
+		+r(320)
+			max-width: 100% 
+			padding-left: 10px 
+	&__about
+		float: left
+		width: 272px
+		+r(640)
+			max-width: 40%
+		+r(540)
+			max-width: 40%
+		+r(320)
+			max-width: 100% 
+	&__twitter
+		float: left 
+		margin-left: 50px
+		width: 215px
+		+r(640)
+			max-width: 40%
+		+r(540)
+			max-width: 40%
+		+r(320)
+			margin-left: 0
+			max-width: 100% 
+	&__tittle
+		text-transform: uppercase
+		font-size: 24.5px
+		letter-spacing: 1px 
+		margin-top: 30px
+		line-height: 30px
+		font-family: 'BebasNeue', serif
+		+r(600)
+			font-size: 15px
+			line-height: 30px 
+		+r(400)
+			line-height: 25px 
+		+r(320)
+			margin-top: 15px
+	p
+		font-size: 12px
+		line-height: 14px
+		margin-top: 17px
+		font-family: 'HelveticaNeue', serif
+		+r(320)
+			margin-top: 10px
+	span
+		color: #F1B09B 
+		font-family: 'HelveticaNeue', serif
+		font-size: 12px
+	a
+		color: #F1B09B 
+		font-size: 12px
+		text-decoration: none
+		text-align: left
+		font-family: 'HelveticaNeue', serif
+

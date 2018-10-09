@@ -1,0 +1,135 @@
+$icons: (0:0)
+$icons: map-merge($icons,(bigline: (X: 0px, Y:0px, W: 659px, H: 13px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -529px, Y:-17px, W: 47px, H: 5px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -476px, Y:-17px, W: 49px, H: 5px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon1: (X: -146px, Y:-55px, W: 28px, H: 33px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon2: (X: -113px, Y:-55px, W: 29px, H: 33px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon3: (X: -178px, Y:-55px, W: 26px, H: 22px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon4: (X: -78px, Y:-55px, W: 31px, H: 39px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon5: (X: -208px, Y:-55px, W: 25px, H: 20px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(jetro: (X: 0px, Y:-17px, W: 87px, H: 34px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(line1: (X: -229px, Y:-17px, W: 126px, H: 13px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(line2: (X: -91px, Y:-17px, W: 134px, H: 13px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(line3: (X: -359px, Y:-17px, W: 113px, H: 13px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(next: (X: 0px, Y:-55px, W: 35px, H: 52px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(prev: (X: -39px, Y:-55px, W: 35px, H: 52px, TW: 659px, TH: 107px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-bigline
+//	width: 659px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-codedby
+//	width: 47px
+//	height: 5px
+//	background-image: url('../img/icons.png')
+//	background-position: -529px -17px
+//
+//.icon-coderiver
+//	width: 49px
+//	height: 5px
+//	background-image: url('../img/icons.png')
+//	background-position: -476px -17px
+//
+//.icon-icon1
+//	width: 28px
+//	height: 33px
+//	background-image: url('../img/icons.png')
+//	background-position: -146px -55px
+//
+//.icon-icon2
+//	width: 29px
+//	height: 33px
+//	background-image: url('../img/icons.png')
+//	background-position: -113px -55px
+//
+//.icon-icon3
+//	width: 26px
+//	height: 22px
+//	background-image: url('../img/icons.png')
+//	background-position: -178px -55px
+//
+//.icon-icon4
+//	width: 31px
+//	height: 39px
+//	background-image: url('../img/icons.png')
+//	background-position: -78px -55px
+//
+//.icon-icon5
+//	width: 25px
+//	height: 20px
+//	background-image: url('../img/icons.png')
+//	background-position: -208px -55px
+//
+//.icon-jetro
+//	width: 87px
+//	height: 34px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -17px
+//
+//.icon-line1
+//	width: 126px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -229px -17px
+//
+//.icon-line2
+//	width: 134px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -91px -17px
+//
+//.icon-line3
+//	width: 113px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -359px -17px
+//
+//.icon-next
+//	width: 35px
+//	height: 52px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -55px
+//
+//.icon-prev
+//	width: 35px
+//	height: 52px
+//	background-image: url('../img/icons.png')
+//	background-position: -39px -55px
+//

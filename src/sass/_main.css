@@ -1,0 +1,2 @@
+.images{background-color:#FFF}.images img{max-width:100%;display:inline-block}@media screen and (max-width: 1000px){.images{background-color:red}.images img{max-width:24%}}@media screen and (max-width: 800px){.images{background-color:#ff0}.images img{max-width:32%}}@media screen and (max-width: 500px){.images{background-color:purple}.images img{max-width:48%}}
+/*# sourceMappingURL=_main.css.map */
